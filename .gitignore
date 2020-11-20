@@ -1,0 +1,35 @@
+!.gitignore
+
+# Application
+public/*.php
+public/*.json
+public/*.txt
+public/*.html
+public/wp-admin/
+public/wp-includes/
+public/wp-content/*
+!public/wp-content/themes
+public/wp-content/themes/index.php
+public/wp-content/themes/twenty*/
+backup/
+backups/
+
+# FILES
+*.sql
+*.tar
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+composer.lock
+
+# WP-CLI
+wp-cli.local.yml
+
+# IDE
+.idea
+.DS_Store
