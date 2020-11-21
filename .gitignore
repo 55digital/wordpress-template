@@ -1,12 +1,8 @@
 !.gitignore
 
 # Application
-public/*.php
-public/*.json
-public/*.txt
-public/*.html
-public/wp-admin/
-public/wp-includes/
+public/wp
+public/wp-config.php
 public/wp-content/*
 !public/wp-content/themes
 public/wp-content/themes/index.php

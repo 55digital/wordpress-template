@@ -1,6 +1,8 @@
 {
   "name": "55digital/wordpress-template",
+  "type": "project",
   "description": "Code for website",
+  "license": "MIT",
   "authors": [
     {
       "name": "Nick Fairchild",
@@ -14,7 +16,13 @@
     }
   ],
   "require": {
+    "composer/installers": "^1.9",
     "johnpbloch/wordpress": ">=5.4"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
   },
   "extra": {
     "installer-paths": {
@@ -25,13 +33,13 @@
         "type:wordpress-theme"
       ]
     },
-    "wordpress-install-dir": "public"
-  },
-  "config": {
-    "preferred-install": "dist",
-    "sort-packages": true,
-    "optimize-autoloader": true
+    "wordpress-install-dir": "public/wp"
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('public/wp-config.php) || copy('public/wp-config-sample.php', 'public/wp-config.php');\""
+    ]
+  }
 }

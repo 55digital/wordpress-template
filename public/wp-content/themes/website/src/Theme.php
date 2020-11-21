@@ -4,7 +4,7 @@ namespace App;
 
 class Theme
 {
-    protected static self $instance;
+    protected static $instance;
 
     public static function instance(): self
     {
