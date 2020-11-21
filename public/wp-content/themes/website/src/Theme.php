@@ -164,7 +164,7 @@ class Theme
             [],
             null
         );
-        wp_enqueue_style('style', get_template_directory_uri().'/public/css/app.css', [], null);
+        wp_enqueue_style('style', get_template_directory_uri().'/public/css/front.css', [], null);
         wp_register_script('maps',
             'https://maps.googleapis.com/maps/api/js?key='.get_option('options_map_api_key').'&callback=initMap&libraries=&v=weekly');
         wp_script_add_data('maps', 'defer', true);
@@ -172,7 +172,7 @@ class Theme
         wp_script_add_data('manifest', 'async', true);
         wp_enqueue_script('vendor', get_template_directory_uri().'/public/js/vendor.js', [], null, true);
         wp_script_add_data('vendor', 'async', true);
-        wp_enqueue_script('script', get_template_directory_uri().'/public/js/app.js', [], null, true);
+        wp_enqueue_script('script', get_template_directory_uri().'/public/js/front.js', [], null, true);
         wp_script_add_data('script', 'async', true);
         wp_enqueue_script('fontawesome', '//kit.fontawesome.com/baa20943ee.js', [], null);
         wp_script_add_data('fontawesome', 'crossorigin', 'anonymous');
