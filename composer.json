@@ -39,7 +39,7 @@
   "prefer-stable": true,
   "scripts": {
     "post-root-package-install": [
-      "@php -r \"file_exists('public/wp-config.php) || copy('public/wp-config-sample.php', 'public/wp-config.php');\""
+      "@php -r \"file_exists('./public/wp-config.php') || copy('./public/wp-config-sample.php', './public/wp-config.php');\""
     ]
   }
 }
